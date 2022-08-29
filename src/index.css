@@ -23,7 +23,17 @@ h1 {
   align-items: center;
 }
 
-.submitButton {
+.submitButton:disabled {
+  background: #dddddd;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  color: black;
+  height: 4vh;
+  cursor: pointer;
+}
+
+.submitButton:enabled {
   background-color: rgb(44, 201, 57);
   font-size: 1rem;
   font-weight: bold;
@@ -43,7 +53,8 @@ h1 {
   display: flex;
   flex-direction: row;
   margin: 30px auto;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -148,13 +159,14 @@ h1 {
   }
 
   .circle.one h3 {
-    margin-top: 30%;
+    margin-top: 45%;
+    margin-right: 20%;
     font-size: 1.5em;
-    margin-left: 30%;
   }
 
   .circle.two h3 {
-    margin-top: 30%;
+    margin-top: 45%;
+    margin-left: 20%;
     font-size: 1.5em;
   }
 
@@ -181,13 +193,14 @@ h1 {
 
 @media (min-width: 1024px) {
   .circle.one h3 {
-    margin-left: 24%;
+    margin-right: 25%;
+    margin-top: 37%;
     font-size: 1.7em;
   }
 
   .circle.two h3 {
-    margin-top: 30%;
-    margin-left: 15%;
+    margin-top: 36%;
+    margin-left: 18%;
     font-size: 1.7em;
   }
 
@@ -197,18 +210,19 @@ h1 {
 
   .shape.onetwo p {
     font-size: 1.4em;
+    margin-top: 70%;
   }
 }
 
 @media (min-width: 1440px) {
   .circle.one h3 {
-    margin-right: 30%;
-    margin-top: 30%;
+    margin-right: 20%;
+    margin-top: 33%;
     font-size: 2em;
   }
 
   .circle.two h3 {
-    margin-top: 30%;
+    margin-top: 33%;
     margin-left: 15%;
     font-size: 2em;
   }
@@ -224,13 +238,13 @@ h1 {
 
 @media (min-width: 1700px) {
   .circle.one h3 {
-    margin-right: 30%;
-    margin-top: 20%;
+    margin-right: 25%;
+    margin-top: 22%;
     font-size: 2em;
   }
 
   .circle.two h3 {
-    margin-top: 20%;
+    margin-top: 22%;
     margin-left: 15%;
     font-size: 2em;
   }
@@ -240,7 +254,7 @@ h1 {
   }
 
   .shape.onetwo p {
-    margin-top: 50%;
+    margin-top: 45%;
     font-size: 1.5em;
   }
 }
@@ -285,6 +299,7 @@ h1 {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
+    margin-left: 50px;
   }
 
   .Venn > .circle.two {
@@ -293,6 +308,7 @@ h1 {
     grid-row-start: 1;
     grid-row-end: 3;
     background-color: rgb(211, 125, 104);
+    margin-right: 50px;
   }
 
   .Venn > .shape.onetwo {
@@ -301,131 +317,14 @@ h1 {
     grid-row-start: 1;
     grid-row-end: 2;
     width: 25vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   /* Text wrap */
   .Venn .circle,
   .Venn .shape {
     text-align: center;
-  }
-
-  .Venn .one > span {
-    float: left;
-    width: 32%;
-    height: 20vh;
-    shape-margin: 0;
-    shape-outside: polygon(
-      100% 0%,
-      0% 0%,
-      0% 100%,
-      100% 100%,
-      100% 92%,
-      76% 88%,
-      44% 80%,
-      20% 70%,
-      10% 60%,
-      5% 50%,
-      10% 40%,
-      20% 30%,
-      41% 20%,
-      70% 10%,
-      100% 5%
-    );
-  }
-  .Venn .one > span + span {
-    float: right;
-    width: 66%;
-    shape-outside: polygon(
-      100% 0%,
-      40% 0%,
-      65% 15%,
-      53% 25%,
-      47% 35%,
-      44% 45%,
-      43% 50%,
-      31% 55%,
-      12% 65%,
-      5% 75%,
-      0% 85%,
-      0% 100%,
-      100% 100%
-    );
-  }
-  .Venn .two > span {
-    float: left;
-    width: 66%;
-    shape-margin: 0;
-    shape-outside: polygon(
-      0% 0%,
-      60% 0%,
-      35% 15%,
-      47% 25%,
-      53% 35%,
-      56% 45%,
-      57% 50%,
-      69% 55%,
-      88% 65%,
-      95% 75%,
-      100% 85%,
-      100% 100%,
-      0% 100%
-    );
-  }
-  .Venn .two > span + span {
-    float: right;
-    width: 32%;
-    shape-outside: polygon(
-      0% 0%,
-      100% 0%,
-      100% 100%,
-      0% 100%,
-      0% 92%,
-      24% 88%,
-      56% 80%,
-      80% 70%,
-      90% 60%,
-      95% 50%,
-      90% 40%,
-      80% 30%,
-      59% 20%,
-      30% 10%,
-      0% 5%
-    );
-  }
-
-  .Venn .onetwo > span {
-    float: left;
-    width: 49%;
-    shape-margin: 0;
-    shape-outside: polygon(
-      0% 0%,
-      100% 0%,
-      100% 30%,
-      72% 40%,
-      48% 50%,
-      20% 70%,
-      10% 85%,
-      0% 98%,
-      100% 98%,
-      100% 100%,
-      0% 100%
-    );
-  }
-  .Venn .onetwo > span + span {
-    float: right;
-    shape-outside: polygon(
-      100% 0%,
-      0% 0%,
-      0% 30%,
-      28% 40%,
-      52% 50%,
-      80% 70%,
-      90% 85%,
-      100% 98%,
-      0% 98%,
-      0% 100%,
-      100% 100%
-    );
   }
 }
 .modal {
@@ -468,6 +367,7 @@ h1 {
   .good {
     height: 20vh;
     width: 30vw;
+    margin-right: 20px;
   }
 
   .fast {
@@ -478,6 +378,7 @@ h1 {
   .cheap {
     height: 20vh;
     width: 30vw;
+    margin-right: 20px;
   }
 
   .text {
@@ -486,11 +387,19 @@ h1 {
   .checkmark {
     margin-top: 80%;
   }
+  .solution {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 1024px) {
   .checkmark {
     margin-top: 70%;
+  }
+  .solution {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -522,6 +431,7 @@ h1 {
   .good {
     height: 30vh;
     width: 20vw;
+    margin-right: 20px;
   }
 
   .fast {
@@ -532,7 +442,9 @@ h1 {
   .cheap {
     height: 30vh;
     width: 20vw;
+    margin-right: 20px;
   }
+
   .text {
     top: 40%;
   }

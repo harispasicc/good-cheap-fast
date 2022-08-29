@@ -17,19 +17,12 @@ function GoodCheap() {
       </p>
       <article className="Venn">
         <div className="circle one">
-          <span></span>
-          <span></span>
           <h3>Good</h3>
         </div>
         <div className="circle two">
-          <span></span>
-          <span></span>
           <h3>Cheap</h3>
         </div>
         <div className="shape onetwo">
-          <span></span>
-          <span></span>
-          <h3></h3>
           <p>LONG DELIVERY TIME</p>
         </div>
       </article>
